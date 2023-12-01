@@ -1,0 +1,882 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+html, body{
+    scroll-behavior: smooth;
+}
+span, a, h1, h2,h3,h4,h5,h6{
+    font-family: "Rubik", sans-serif;
+}
+/* header-menu FIXME: */ 
+.primary-menu ul{
+    margin-right: 30px;
+}
+.primary-menu ul li a{
+    text-decoration: none;
+    padding: 0px 15px;
+    color: black;
+    font-weight: 500;
+    font-size: 13px;
+}
+.primary-menu ul li a:hover{
+    color: red;
+}
+/* dropdown menu */
+.primary-menu ul li {
+    position: relative;
+}
+.primary-menu ul li ul{
+    padding-left: 0;
+    position: absolute;
+    top: 200%;
+    left: 0;
+    width: 110px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    z-index: 1;
+}
+.primary-menu ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 130%;
+}
+.primary-menu ul li ul li {
+    list-style: none;
+   padding: 10px 3px;
+}
+.primary-menu ul li ul li:hover a{
+    color: white;
+}
+.primary-menu ul li ul li:hover{
+    background-color: tomato;
+    border-radius: 10px;
+}
+/* header search TODO:*/ 
+.header-info-search span{
+    margin-right: 10px;
+    border-right: 1px solid #818181;
+    padding-right: 10px;
+    font-size: 20px;
+}
+/* header call  */
+.header-info-icon span{
+    color: red;
+    margin-right: 10px;
+    font-size: 20px;
+}
+/* HEADER INFO */ 
+.header-information span{
+    font-size: 13px;
+    font-weight: 400;
+}
+.header-information a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+.header-information{
+    margin-right: 15px;
+}
+/* button design TODO:*/
+.btn-primary{
+    position: relative;
+    z-index: 1;
+    background-color: red !important;
+    border-color: red !important;
+    padding: 8px 24px;
+    font-size: 14px;
+}
+.btn-primary::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 30%;
+    background-color: black !important;
+    border-color: black !important;
+    z-index: -1;
+    transition:all .4s ease-in-out;
+}
+.btn-primary:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.header-logo img{
+    width: 70%;
+}
+/* Banner section FIXME:*/
+.banner-section{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    background: url(/main-banner2.jpg) fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+}
+.banner-section .banner-subtle h6{
+    color: red;
+    font-weight: 400;
+    font-size: 16px;
+}
+.banner-section .banner-header p{
+    width:550px;
+    color: #2e2e2e;
+}
+.banner-section .banner-header h1{
+    color: black;
+    font-weight: 500;
+    font-size: 55px;
+    width: 550px;
+}
+ .banner-social{
+    position: relative;
+}
+.banner-social .banner-all{
+    display: flex;
+    position: absolute;
+    top:180px;
+    left: -100px;
+}
+.banner-social .banner-all ul a{
+    margin-left: 20px;
+}
+.banner-social .banner-all span,li{
+    list-style: none;
+}
+.banner-social .banner-all span{
+    margin-right: 10px;
+    position: relative;
+}
+.banner-social .banner-all li span::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    background-color: black;
+    width: 20px;
+    height: 1px;
+}
+.banner-social .banner-all a{
+    color: black;
+    font-size: 15px;
+    padding: 0px 5px;
+    margin-left: 10px;
+}
+.banner-social .banner-all a:hover{
+    color: red;
+    transition:all .4s ease-in-out;
+}
+/*client logo design TODO:*/
+.client-logo{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.client-section{
+    border-bottom: 1px solid #ddd;
+}
+.client-logo img{
+    width:80%;
+}
+/* about section FIXME:*/
+/* .common-section{
+    display: flex;
+} */
+.about{
+    padding: 100px 0px;
+}
+.common-section .about-left img{
+    width: 80%;
+}
+.common-section .about-left{
+    text-align: center;
+    width: 49%;
+}
+.common-section .about-right{
+    width: 49%;
+}
+/* about-left-info desing TODO:*/
+.about-left{
+    position: relative;
+}
+.about-left-info{
+    background: url(/shape.png) no-repeat top  center;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    right: 35px;
+    height: 180px;
+    width: 180px;
+}
+.about-left-info span{
+    font-size: 50px;
+    font-weight: 600;
+    color: red;
+    display: block;
+    margin-top: 35px;
+    margin-bottom: -15px;
+}
+.about-left-info {
+    font-size: 13px;
+    font-weight: 500;
+}
+/* about right section design  FIXME:*/
+.about-right h6{
+    color: red;
+    font-weight: 300;
+    font-size: 13px;
+}
+.about-right h1{
+    color: black;
+    font-weight: 400;
+    font-size: 28px;
+    width: 85%;
+}
+.about-right p{
+    color: #414141;
+    font-size: 13px;
+    width: 90%;
+}
+.about-right span{
+    font-size: 15px;
+    font-weight: 400;
+}
+.about-right ul{
+   margin-top: 10px;
+   padding-left: 0;
+}
+.about-right ul li{
+   font-weight: 400;
+   font-size: 14px;
+   position: relative;
+   margin-left: 10px;
+   margin-bottom: 7px;
+}
+.about-right ul li::before{
+    content: "\f00c";
+    font-family: FontAwesome;
+    position: absolute;
+    left: -19px;
+    color: red;
+}
+/* why choose us section design FIXME:*/
+.why-choose-us{
+    padding: 100px 0px;
+    background-color: #f9fafb;
+}
+/* why choose us left design */
+.why-choose-us .finix-website {
+    position: relative;
+}
+.why-choose-us .finix-website img{
+    width: 80%;
+}
+.finix-website span{
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+.why-choose-us .finix-website h1{
+    color: black;
+   font-size: 28px;
+   margin-top: 14px;
+}
+.why-choose-us .finix-website p{
+    font-size: 13px;
+    color: #5a5a5a;
+    width: 500px;
+}
+.why-choose-us .finix-website button {
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 70px;
+    right: 256px;
+    transition: .4s ease-out;
+}
+.why-choose-us .finix-website button:hover{
+    color: red;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .40);
+}
+.why-choose-us .finix-website button::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    background-color: rgba(255, 0, 0, 0.809);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: round 1s ease-in infinite;
+}
+@keyframes round {
+    0%{
+        transform: scale(.2);
+        opacity: .1;
+    }
+   20%{
+    transform: scale(.7);
+    opacity: .2;
+   }
+   40%{
+    transform: scale(.9);
+    opacity: .5;
+   }
+   60%{
+    transform: scale(1.1);
+    opacity: .5;
+   }
+   80%{
+    transform: scale(1.2);
+    opacity: .5;
+   }
+   100%{
+    transform: scale(1.3);
+    opacity: .0;
+   }
+}
+/* why-choose-right design FIXME:*/
+.why-choose-right {
+    margin-top: 60px;
+}
+.why-choose-right .why-choose-info{
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, .10);
+    padding: 60px 10px; 
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .4s ease-in-out;
+}
+.why-choose-right .why-choose-info:hover{
+    transform: translateY(-15px);    
+}
+.why-choose-right .why-choose-info::after {
+    content: "";
+    position: absolute;
+    top: -188px;
+    left: -2px;
+    height: 251px;
+    width: 266px;
+    border-radius: 50%;
+    background-color: rgb(255, 227, 232);
+    z-index: -1;
+}
+.why-choose-right .why-choose-info  i{
+    font-size: 30px;
+    color: red;
+    background-color: #ffffff;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    transition: .4s;
+}
+.why-choose-right .why-choose-info:hover i{
+    color: white;
+    background-color: red;
+}
+.why-choose-right .why-choose-info h4{
+    font-size: 22px;
+    font-weight: 500;
+}
+.why-choose-right .why-choose-info p{
+    font-size: 14px;
+    width: 200px;
+    margin: auto;
+}
+.choose1{
+    margin-top: 30px;
+}
+.choose3{
+    margin-top: 30px;
+}
+/* apply-section design TODO:*/
+.apply-section{
+    padding: 80px 0px;
+}
+/* apply-header design */
+.apply-header{
+    padding: 30px 0;
+    text-align: center;
+}
+.apply-header span{
+    color: red;
+    font-size: 14px;
+    font-weight: 300;
+}
+.apply-header h1{
+    color: black;
+   font-size: 30px;
+   margin-top: 10px;
+}
+.apply-header p{
+    font-size: 13px;
+    color: #5a5a5a;
+    width: 500px;
+    margin: auto;
+    line-height: 25px;
+}
+/* apply-left design FIXME:*/
+.apply-left{
+    padding-top: 50px;
+}
+.apply-left h3{
+    color: black;
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+/* apply-left-step design FIXME:*/
+.apply-left-step ul{
+    position: relative;
+}
+.apply-left-step ul::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 1px;
+    height: calc(100% - 80px);
+    background: red;
+}
+.apply-left-step ul li{
+    position: relative;
+}
+.apply-left-step ul li::before {
+    content: attr(data-counter);
+    position: absolute;
+    top: 1px;
+    left: -40px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    background: white;
+}
+.apply-left-step ul li strong{
+    font-size: 19px;
+    margin-left: 10px;
+}
+.apply-left-step ul li p{
+    font-size: 14px;
+    color: #606060;
+    width: 85%;
+    margin-top: 6px; 
+    margin-left: 10px; 
+}
+.apply-left-step a{
+    margin-top: 10px;
+}
+.apply-form{
+    background-color: #fdebeb;
+    padding: 60px 30px;
+}
+.apply-form p{
+    font-size: 13px;;
+    text-align: center;
+}
+.apply-form h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.apply-form label{
+    font-size: 14px;
+    color: #6e6d6d;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+.apply-form input{
+    border: none;
+    border-radius: 0px;
+    width: 80%;
+    font-size: 14px;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+}
+.apply-form select{
+    border: none;
+    border-radius: 0px;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.apply-form input:focus{
+    outline: none !important;
+    border: none !important;
+}
+.apply-form select:focus{
+    outline: none !important;
+    border: none !important;
+}
+/* supprt-section design TODO:*/
+.supprt-section{
+    margin: 20px 0px;
+}
+.supprt-section .container{
+    background-color: red;
+    padding: 50px 30px;
+}
+.support-left h2{
+    color: white;
+    border-right: 1px solid white;
+    padding-right: 30px;
+    font-size: 28px;
+    line-height: 2.5rem;
+}
+.support-right{
+    text-align: center;
+}
+.support-right i{
+    font-size: 25px;
+    background-color: white;
+    color: red;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    line-height: 65px;
+    text-align: center;
+    margin-top: 20px;
+}
+.support-right a{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+}
+/* company-section design  FIXME:*/
+.company-section{
+    padding: 100px 0px;
+}
+.company-left-header h1{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.company-left{
+    display: flex;
+}
+.company-left .company-left-icon i {
+    margin-right: 20px;
+    color: red;
+    font-size: 20px;
+}
+.company-left-info h3{
+    font-size: 20px;
+}
+.company-left-info p{
+    font-size: 14px;
+    color: #606060;
+    width: 90%;
+}
+.company-image img{
+    width: 87%;
+    margin-top: 30px;
+}
+/* services-section design TODO: */
+.services-section{
+    padding: 100px 0px;
+    background-color: #f9fafb;
+}
+.same-section{
+    text-align: center;
+}
+.same-section span{
+    color: red;
+    font-size: 13px;
+}
+.same-section h4{
+    font-size: 27px;
+    font-weight: 500;
+    margin-top: 13px;
+}
+.same-section p{
+    color: #606060;
+    font-size: 14px;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+}
+.service-tab-header{
+    margin-bottom: 50px;
+}
+.service-tab-header li{
+    flex: 1 1 auto;
+    margin-top: 30px ;
+}
+.service-tab-header li button{
+    color: black;
+}
+.service-tab-header li button i{
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, .10);
+    margin-bottom: 15px;
+}
+/* services-let design */
+.services-let{
+    text-align: right;
+}
+.services-let img{
+    width: 85%;
+}
+/* all service tab css */
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: red;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid red !important;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: transparent;
+    isolation: isolate;
+}
+/* review-section design FIXME:*/
+.review-section{
+    padding: 100px 0;
+    padding-bottom: 50px;
+}
+.review-main-section{
+    padding: 60px 0;
+}
+.review-left{
+    margin-top: 50px;
+}
+.review-left h6{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 2rem;
+}
+.review-left span{
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+}
+.review-left p{
+    font-size: 14px;
+}
+/* team-section design TODO: */
+.team-section{
+    background-color: #f9fafb;
+    padding-top: 50px;
+}
+.member-img img{
+    width: 100%;
+    height: auto;
+    margin-right: 15px;
+}
+.team-member .team-social{
+    text-align: center;
+}
+.team-member .team-social ul{
+    text-align: center;
+}
+.team-member .team-social ul li {
+    margin-left: -25px;
+    margin-top: -55px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease-in-out;
+    transform: translateY(40px);
+}
+.team-member:hover .team-social ul li {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+.team-member .team-social ul li:nth-child(1){
+    transition-delay: .2s ;
+}
+.team-member .team-social ul li:nth-child(2){
+    transition-delay: .3s ;
+}
+.team-member .team-social ul li:nth-child(3){
+    transition-delay: .4s;
+}
+.team-member .team-social ul li:nth-child(4){
+    transition-delay: .5s;
+}
+.team-member .team-social ul li a{
+    text-decoration: none;
+    margin-right: 30px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+ }
+.team-member .team-social ul li a:hover{
+    color: white;
+    background-color: red;
+}
+.member-info h6{
+    color: red;
+}
+.member-info p{
+    font-size: 13px;
+}
+/* post-section design FIXME: */
+.post-section{
+    padding: 60px 0;
+}
+.post-item img{
+    max-width: 100%;
+}
+.post-item:hover img{
+    cursor: pointer;
+}
+.post-item p{
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+.post-item h6{
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+    transition: all .6s ease-in-out;
+}
+.post-item h6:hover{
+    color: red;
+    cursor: pointer;
+}
+.post-item a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all .6s ease-in-out;
+}
+.post-item:hover a{
+    color: red;
+    letter-spacing: 2px;
+}
+/* footer section design TODO: */  
+/* footer column 1 design */
+.footer{
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.footer-1 img{
+    width: 120px;
+    padding-bottom: 20px;
+}
+.footer-1 p{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.footer-social{
+    margin-top: 20px;
+}
+.footer-social ul li span{
+    color: white;
+    margin-right: 10px;
+}
+.footer-social ul li a{
+    margin-right: 10px;
+    font-size: 13px;
+    transition: all .4s ease-in-out;
+}
+.footer-social ul li a:hover{
+    color: red;
+    font-size: 12px;
+    margin-right: 11px;
+}
+/* common footer link design FIXME:*/
+.common-footer ul{
+    padding-left: 0;
+}
+.common-footer li{
+    padding-bottom: 10px;
+}
+.common-footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .8s;
+}
+.common-footer a:hover{
+    color: red;
+    letter-spacing: 2px;
+}
+.common-footer h4{
+    color: white;
+    font-size: 16px;
+}
+.common-footer hr{
+    color: white;
+}
+/* .footer column-4 design TODO:*/
+.footer-4 h4{
+    color: white;
+    font-size: 16px;
+}
+.footer-4 i{ 
+    color: white;
+    margin-right: 10px;
+}
+.footer-4 a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+}
+.footer-address p{
+    color: white;
+    font-size: 13px;
+}
+.footer-email{
+    margin-bottom: 15px;
+}
+.footer-email a{
+    transition: .4s;
+}
+.footer-email a:hover{
+    color: red;
+}
+.footer-phone-number a{
+    transition: .4s;
+}
+.footer-phone-number a:hover{
+    color: red;
+}
+/* footer copyright design FIXME: */
+.footer-copyright p{
+    color: rgb(59, 59, 59);
+    font-size: 14px;
+}
+.footer-copyright a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
