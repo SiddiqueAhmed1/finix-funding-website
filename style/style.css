@@ -206,7 +206,7 @@ span, a, h1, h2,h3,h4,h5,h6{
     position: relative;
 }
 .about-left-info{
-    background: url(/shape.png) no-repeat top  center;
+    background: url(/img/shape.png) no-repeat top  center;
     background-size: contain;
     position: absolute;
     bottom: 0;
@@ -879,4 +879,25 @@ span, a, h1, h2,h3,h4,h5,h6{
     color: white;
     text-decoration: none;
     font-size: 14px;
+}
+/* back-to-top design */
+.back-to-top{
+    position: relative;
+}
+.back-to-top a {
+    position: fixed;
+    right: 32px;
+    bottom: 30px;
+    color: white;
+    background: black;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 15px;
+    transition: all .2s ease-in-out;
+}
+.back-to-top a:hover{
+    background-color: red;
 }
