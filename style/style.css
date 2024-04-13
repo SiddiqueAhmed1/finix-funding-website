@@ -109,16 +109,18 @@ span, a, h1, h2,h3,h4,h5,h6{
 .header-logo img{
     width: 70%;
 }
+
 /* Banner section FIXME:*/
-.banner-section{
+.banner-section {
     height: 700px;
     display: flex;
     align-items: center;
-    background: url(/img/main-banner2.jpg) fixed;
+    background-image: url('../images/main-banner2.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top right;
+    background-position: top center;
 }
+
 .banner-section .banner-subtle h6{
     color: red;
     font-weight: 400;
@@ -202,11 +204,14 @@ span, a, h1, h2,h3,h4,h5,h6{
     width: 49%;
 }
 /* about-left-info desing TODO:*/
+
 .about-left{
     position: relative;
 }
+
 .about-left-info{
-    background: url(/img/shape.png) no-repeat top  center;
+    background-image: url('../images/shape.png') ;
+
     background-size: contain;
     position: absolute;
     bottom: 0;
@@ -214,6 +219,7 @@ span, a, h1, h2,h3,h4,h5,h6{
     height: 180px;
     width: 180px;
 }
+
 .about-left-info span{
     font-size: 50px;
     font-weight: 600;
